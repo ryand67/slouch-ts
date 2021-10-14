@@ -1,11 +1,15 @@
-import React from 'react'
+import { auth } from '../../util/firebase';
+import { signOut } from 'firebase/auth';
+import SearchBar from './SearchBar';
 
-function SideBar() {
+function TopBar() {
     return (
-        <div className="w-1/5 bg-red-400 h-full">
-            
+        <div className="w-full flex flex-row justify-between items-center px-4 bg-green-300 h-16">
+           <h1 className="font-yellowtail text-white text-4xl">Slouch</h1> 
+           <SearchBar />
+           <button onClick={() => signOut(auth)} className="text-white border-2 border-white rounded py-2 px-4 hover:text-green-300 hover:bg-white transition-all">Sign Out</button>
         </div>
     )
 }
 
-export default SideBar
+export default TopBar

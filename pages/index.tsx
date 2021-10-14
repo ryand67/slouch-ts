@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Head from 'next/head'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../util/firebase';
@@ -18,7 +17,6 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"></link>
       </Head>
-      asdf
       {loading ? <Loading /> : !user ? <Credentials /> : <ChatScreen />}
     </div>
   )
