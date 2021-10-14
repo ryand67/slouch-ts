@@ -10,7 +10,7 @@ export default function Home() {
   const [user, loading] = useAuthState(auth);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-50">
+    <div className="flex items-center justify-center h-screen">
       <Head>
         <title>Slouch | Hardly Working</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
