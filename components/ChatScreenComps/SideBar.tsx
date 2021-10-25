@@ -17,10 +17,14 @@ function SideBar() {
     }, [])
 
     return (
-        <div className="w-1/5 bg-red-400 h-full border-r-2">
+        <div className="w-1/5 h-full border-r-2 overflow-scroll">
             {conversationList.map((doc, i): JSX.Element => {
-                return <SideBarContact key={i} index={i} info={doc.data()} />
+                return <SideBarContact key={i} index={i} info={doc.data()} length={conversationList.length} />
             })}        
+            {/* bottom symbol */}
+            <div className="mt-3 w-full h-4 flex items-center justify-center">
+                <div className="h-2 w-2 bg-gray-300 rounded-full"></div>
+            </div>
         </div>
     )
 }
