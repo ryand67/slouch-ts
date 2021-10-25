@@ -33,7 +33,7 @@ function SignUp({ changeCredState }) {
             return;
         }
 
-        if (email, password, confirmPassword, name) {
+        if (email && password && confirmPassword && name) {
             await setDoc(doc(db, 'users', email), {
                 name,
                 email
