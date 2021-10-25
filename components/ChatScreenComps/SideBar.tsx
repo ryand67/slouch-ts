@@ -17,7 +17,7 @@ function SideBar() {
     }, [])
 
     return (
-        <div className="w-1/5 h-full border-r-2 overflow-scroll">
+        <div className="w-1/5 h-full border-r-2 overflow-y-scroll">
             {conversationList.map((doc, i): JSX.Element => {
                 return <SideBarContact key={i} index={i} info={doc.data()} length={conversationList.length} />
             })}        
